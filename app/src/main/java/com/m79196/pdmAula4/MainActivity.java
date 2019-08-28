@@ -128,4 +128,16 @@ public class MainActivity extends AppCompatActivity {
         }
         startActivity(intent);
     }
+
+    public void maps1(View view) {
+    }
+
+    public void maps2(View view) {
+    }
+
+    public void maps3(View view) {
+    }
+
+    public void pic(View view) {
+    }
 }

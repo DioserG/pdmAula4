@@ -32,6 +32,38 @@
         android:textAllCaps="false"
         android:onClick="callClick"/>
 
+    <Button
+        android:id="@+id/maps1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="maps1"
+        android:text="MAPS1"/>
+
+    <Button
+        android:id="@+id/maps2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="maps2"
+        android:text="MAPS2"/>
+
+    <Button
+        android:id="@+id/maps3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="maps3"
+        android:text="MAPS3"/>
+
+    <Button
+        android:id="@+id/pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:onClick="pic"
+        android:text="PIC ITI"/>
+
     <TextView
         android:id="@+id/txtNome"
         android:layout_width="match_parent"
@@ -41,6 +73,7 @@
         android:id="@+id/txtTelefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
     <ImageView
         android:id="@+id/imgView"
