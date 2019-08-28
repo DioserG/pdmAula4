@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -66,29 +66,36 @@
 
     <TextView
         android:id="@+id/txtContato"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/contato"
         android:textSize="25dp"
         />
 
-    <TextView
-        android:id="@+id/txtNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nome:"
-        android:textSize="20dp"/>
+    <TableRow
+        android:layout_width="94dp"
+        android:layout_height="27dp"
+        android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/txtTelefone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Telefone:"
-        android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/txtNome"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Nome:"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/txtTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Telefone:"
+            android:textSize="20dp" />
+    </TableRow>
 
     <ImageView
         android:id="@+id/imgView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-</LinearLayout>
+        android:layout_height="match_parent" />
+</TableLayout>

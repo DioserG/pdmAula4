@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvNome = (TextView) findViewById(R.id.txtNome);
         tvPhone = (TextView) findViewById(R.id.txtTelefone);
+
     }
 
     public void lerContatosClick(View view) {
@@ -97,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
 
     public void lerContatos2Click(View view) {
         //verificar permissao de leitura de contatos em Configuraçoes do Dispositivo
