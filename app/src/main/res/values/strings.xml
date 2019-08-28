@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">pdmAula4</string>
+    <string name="contato"><u>Contato</u></string>
 </resources>
