@@ -7,11 +7,15 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.provider.MediaStore;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public final int SELECIONAR_CONTATO = 0;
     public final int SELECIONAR_CONTATO2 = 1;
     TextView tvNome, tvPhone;
+    ImageView ivImagem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvNome = (TextView) findViewById(R.id.txtNome);
         tvPhone = (TextView) findViewById(R.id.txtTelefone);
+        ivImagem = (ImageView) findViewById(R.id.iv);
 
     }
 
@@ -91,9 +97,17 @@ public class MainActivity extends AppCompatActivity {
                 tvNome.setText(nome);
                 TextView tvPhone = (TextView) findViewById(R.id.txtTelefone);
                 tvPhone.setText(phoneNumber);
-            } else if (requestCode == 2 && resultCode == RESULT_OK) {
+            } else if (requestCode == 123 && resultCode == RESULT_OK) {
 
                 //retorno da camera
+                super.onActivityResult(requestCode, resultCode, data);
+                Bitmap bm;
+                ImageView iv = (ImageView) findViewById(R.id.iv);
+                if(requestCode == 123 & resultCode == RESULT_OK){
+                    bm = (Bitmap) data.getExtras().get("data");
+                    iv.setImageBitmap(bm);
+                    iv.setScaleType(ImageView.ScaleType.FIT_XY);
+                }
             }
         }
 
@@ -139,5 +153,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pic(View view) {
+        Intent it = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(it,123);
     }
+
 }
